@@ -19,9 +19,16 @@
       <section class="card map-card">
         <div class="section-title-wrap">
           <h2>Campus Map</h2>
-          <span class="hint">Custom offline map</span>
+          <span class="hint">Live route overlay on custom map</span>
         </div>
-        <img src="/assets/campus_map.png" alt="Campus map" class="campus-map" />
+
+        <div class="map-stage" id="mapStage">
+          <img src="/assets/campus_map.png" alt="Campus map" class="campus-map" id="campusMapImage" />
+          <svg id="routeOverlay" class="route-overlay" aria-label="Route overlay"></svg>
+          <div id="markersLayer" class="markers-layer"></div>
+        </div>
+
+        <p class="map-note">Building markers are plotted from saved coordinates. Selected route is highlighted in blue.</p>
       </section>
 
       <section class="card">

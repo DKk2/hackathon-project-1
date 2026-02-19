@@ -4,28 +4,29 @@ from __future__ import annotations
 
 from models import get_connection, init_db
 
+# Coordinates are stored as percentages so frontend can plot markers over the map image.
 BUILDINGS = [
-    ("Library", 10, 20),
-    ("Canteen", 30, 15),
-    ("Block A", 20, 30),
-    ("Block B", 35, 35),
-    ("Admin Office", 15, 10),
-    ("Lab 1", 25, 28),
-    ("Lab 2", 28, 40),
-    ("Hostel", 45, 20),
+    ("Hostel", 24, 24),
+    ("Library", 48, 42),
+    ("Block A", 63, 60),
+    ("Block B", 70, 70),
+    ("Admin Office", 44, 86),
+    ("Lab 1", 56, 78),
+    ("Lab 2", 60, 72),
+    ("Canteen", 77, 74),
 ]
 
 CONNECTIONS = [
-    ("Library", "Block A", 12),
-    ("Library", "Admin Office", 11),
-    ("Admin Office", "Canteen", 16),
-    ("Block A", "Lab 1", 7),
-    ("Lab 1", "Lab 2", 9),
-    ("Block A", "Block B", 14),
-    ("Block B", "Lab 2", 8),
-    ("Canteen", "Hostel", 10),
-    ("Block B", "Hostel", 12),
-    ("Lab 1", "Canteen", 13),
+    ("Hostel", "Library", 18),
+    ("Library", "Block A", 20),
+    ("Block A", "Block B", 10),
+    ("Block B", "Canteen", 9),
+    ("Library", "Lab 2", 16),
+    ("Lab 2", "Lab 1", 8),
+    ("Lab 1", "Admin Office", 12),
+    ("Admin Office", "Block B", 14),
+    ("Block A", "Lab 2", 11),
+    ("Canteen", "Lab 1", 13),
 ]
 
 
