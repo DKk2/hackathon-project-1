@@ -61,7 +61,7 @@ source venv/bin/activate
 ```
 
 ```powershell
-venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 ```
 
 ```bash
