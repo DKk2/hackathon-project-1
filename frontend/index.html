@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Campus Navigation System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <main class="container">
+      <header class="hero card">
+        <h1>Smart Campus Navigation System</h1>
+        <p class="subtitle">Plan smarter routes across Blocks, Office, library, Hostels and more.</p>
+      </header>
+
+      <section class="card map-card">
+        <div class="section-title-wrap">
+          <h2>Campus Map</h2>
+          <span class="hint">Custom offline map</span>
+        </div>
+        <img src="/assets/campus_map.png" alt="Campus map" class="campus-map" />
+      </section>
+
+      <section class="card">
+        <div class="section-title-wrap">
+          <h2>QR Scan Simulation</h2>
+          <span class="hint">Set your current location</span>
+        </div>
+        <div class="row">
+          <select id="qrBuildingSelect"></select>
+          <button id="scanQrBtn">Scan QR</button>
+        </div>
+        <p id="qrStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <div class="section-title-wrap">
+          <h2>Shortest Path Navigation</h2>
+          <span class="hint">Powered by A* algorithm</span>
+        </div>
+
+        <div class="grid">
+          <label>
+            Start Building
+            <select id="startSelect"></select>
+          </label>
+          <label>
+            Destination Building
+            <select id="endSelect"></select>
+          </label>
+        </div>
+
+        <button id="navigateBtn">Get Directions</button>
+
+        <div class="output">
+          <h3>Step-by-step Directions</h3>
+          <p id="directionsText">Select buildings and click "Get Directions".</p>
+          <p id="distanceText"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-title-wrap">
+          <h2>Search Building</h2>
+          <span class="hint">Quick lookup</span>
+        </div>
+        <div class="row">
+          <input id="searchInput" type="text" placeholder="Type building name e.g., Lab 2" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <p id="searchResult"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
